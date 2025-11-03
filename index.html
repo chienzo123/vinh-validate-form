@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form">
+    <h2 class="form__title"> Register form</h2>
+    <form class="form__body">
+      
+      <div class="form__group">
+        <label for="username" class="form__label">User Name</label>
+        <input type="text" id="username" class="form__input" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form__group">
+        <label for="email" class="form__label">Email</label>
+        <input type="email" id="email" class="form__input" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form__group">
+        <label for="password" class="form__label">Password</label>
+        <input type="password" id="password" class="form__input" placeholder="Enter password" required>
+      </div>
+
+      <div class="form__group">
+        <label for="confirm" class="form__label">Confirm Password</label>
+        <input type="password" id="confirm" class="form__input" placeholder="Confirm password" required>
+      </div>
+
+      <div class="form__group">
+        <label for="role" class="form__label">Role</label>
+        <select id="role" class="form__select" required>
+          <option value="">Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="manager">Manager</option>
+          <option value="staff">Staff</option>
+        </select>
+      </div>
+
+      <div class="form__group">
+        <label for="store" class="form__label">Store Address</label>
+        <input type="text" id="store" class="form__input" placeholder="Enter store address">
+      </div>
+
+      <div class="form__group">
+        <label for="position" class="form__label">Position</label>
+        <select id="position" class="form__select" required>
+          <option value="">Select Position</option>
+          <option value="cashier">Cashier</option>
+          <option value="sales">Sales</option>
+          <option value="inventory">Inventory</option>
+        </select>
+      </div>
+
+      <button type="submit" class="form__button">Register</button>
+    </form>
+  </div>
+</body>
+</html>
