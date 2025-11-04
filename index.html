@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Registration Form</title>
+  <title>Vinh form</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,50 +14,74 @@
       <div class="form__group">
         <label for="username" class="form__label">User Name</label>
         <input type="text" id="username" class="form__input" placeholder="Enter your name" required>
+        <div class="error" id="username-error"></div>
       </div>
 
       <div class="form__group">
         <label for="email" class="form__label">Email</label>
         <input type="email" id="email" class="form__input" placeholder="Enter your email" required>
+        <div class="error" id="email-error"></div>
       </div>
 
       <div class="form__group">
         <label for="password" class="form__label">Password</label>
         <input type="password" id="password" class="form__input" placeholder="Enter password" required>
+        <div class="error" id="password-error"></div>
       </div>
 
       <div class="form__group">
         <label for="confirm" class="form__label">Confirm Password</label>
         <input type="password" id="confirm" class="form__input" placeholder="Confirm password" required>
+        <div class="error" id="confirm-error"></div>
       </div>
 
       <div class="form__group">
         <label for="role" class="form__label">Role</label>
         <select id="role" class="form__select" required>
           <option value="">Select Role</option>
-          <option value="admin">Admin</option>
-          <option value="manager">Manager</option>
-          <option value="staff">Staff</option>
+          <option value="Manager">Manager</option>
+          <option value="Staff">Staff</option>
         </select>
+        <div class="error" id="role-error"></div>
       </div>
 
       <div class="form__group">
         <label for="store" class="form__label">Store Address</label>
         <input type="text" id="store" class="form__input" placeholder="Enter store address">
+        <div class="error" id="store-error"></div>
       </div>
 
       <div class="form__group">
         <label for="position" class="form__label">Position</label>
         <select id="position" class="form__select" required>
           <option value="">Select Position</option>
-          <option value="cashier">Cashier</option>
-          <option value="sales">Sales</option>
-          <option value="inventory">Inventory</option>
+          <option value="Cashier">Cashier</option>
+          <option value="Cook">Cook</option>
+          <option value="Lobby">Lobby</option>
         </select>
+        <div class="error" id="position-error"></div>
       </div>
 
-      <button type="submit" class="form__button">Register</button>
+      <button type="submit" class="form__button">Submit</button>
     </form>
   </div>
+
+   <!-- Modal UI -->
+  <div id="modalContainer" class="modal hidden">
+    <div class="modal__content">
+      <h3>Registration Info</h3>
+      <p><strong>Username:</strong> <span id="modalUsername"></span></p>
+      <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+      <p><strong>Password:</strong> <span id="modalPassword"></span></p>
+      <p><strong>Role:</strong> <span id="modalRole"></span></p>
+      <p><strong>Store Address:</strong> <span id="modalStore"></span></p>
+      <p><strong>Position:</strong> <span id="modalPosition"></span></p>
+      <button class="modal__close">Close</button>
+    </div>
+  </div>
+
+  
+  <script src="validate.js"></script>
+
 </body>
 </html>

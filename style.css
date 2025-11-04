@@ -80,5 +80,36 @@ body {
 
 /* Example modifier (optional) */
 .form__input--error {
-  border-color: #dc3545;
+  border-color: black;
+}
+
+.error {
+  color: black;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal__content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.modal__close {
+  margin-top: 10px;
+  cursor: pointer;
 }
